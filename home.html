@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigation Example</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        #left-panel {
+            width: 20%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        #left-panel>img {
+            width: 33%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 55%;
+            height: 13%;
+        }
+
+        #content {
+            flex: 1;
+            padding: 40px;
+            
+        }
+
+        #content>div {
+            display: none;
+        }
+
+        #content>div.show {
+            display: block;
+        }
+        #left-panel>div.baa>p.ba {
+
+            padding-top: 2rem;
+        }
+
+        #left-panel>div.baa>p.ba>a.b {
+
+            background-color: rgb(200, 247, 247);
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            width: 250px;
+            height: 15px;
+            border-radius: 25px;
+
+        }
+    </style>
+
+    <script>
+
+        function showContent(contentId) {
+
+            var contentDivtag = document.querySelectorAll('#content > div');
+
+            for (var i = 0; i < contentDivtag.length; i++) {
+                contentDivtag[i].classList.remove('show');
+            }
+            document.getElementById(contentId).classList.add('show');
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="left-panel">
+        <img src="Abhinandan Maity.jpg">
+        <div class="baa">
+            <p class="ba"><a class="b" href="#" onclick="showContent('home')" style="text-decoration: none; font-size: 0.7rem;">Home</a>
+            </p>
+            <p class="ba"><a class="b" href="#" onclick="showContent('contact')"
+                    style="text-decoration: none; font-size: 0.7rem;">Contact</a></p>
+            <p class="ba"><a class="b" href="#" onclick="showContent('information')"
+                    style="text-decoration: none; font-size: 0.7rem;">Information</a></p>
+            <p class="ba"><a class="b" href="#" onclick="showContent('guide')" style="text-decoration: none; font-size: 0.7rem;">Guide</a>
+            </p>
+        </div>
+    </div>
+    <div id="content">
+        <div id="home" class="show" style="font-size: 0.9rem;">
+            <h1 style="padding-bottom: 4rem;">Welcome to the Home Page</h1>
+            <p>My name is Abhinandan Maity.
+
+            <div>Currently I am pursuing Bachelor of Technology in Information Technology. I specialize in building
+                mobile responsive front-end UI applications that connect with API and other backend technologies. I am
+                passionate about learning new technologies and understand there is more than one way to accomplish a
+                task. Though I am most proficient in building front-end applications using HTML, CSS, Javascript, and
+                React, I am a quick learner and can pick up new tech stacks as needed.</div>
+
+            </p>
+        </div>
+        <div id="contact" style="font-size: 0.9rem;">
+
+            <div class="" style="display: flex; flex-wrap: wrap;">
+            <div class="" style="padding: 3rem;">
+                <h1 style="padding-bottom: 4rem;">Contact</h1>
+                <p><strong>Email:</strong> abhinandanmaity222@gmail.com<br>
+                    <strong>Phone:</strong> +91 9800456940<br>
+                    <strong>Address:</strong> sutahata, haldia, Purba Medinipur, West Bangal, India
+                </p>
+            </div>
+            <div class="contactimg">
+
+                <img src="about.jpg" alt="" width="300px">
+            </div>
+
+            </div>
+        </div>
+        <div id="information" style="font-size: 0.9rem;">
+            <h1 style="padding-bottom: 4rem;">Information</h1>
+            <p>My top skills are
+
+            <div><b>1. NextJs</b></div>
+            <div><b>2. ReactJs</b></div>
+            <div><b>3. Javascript</b></div>
+            <div><b>4. Tlawind Css</b></div>
+            <div><b>5. Html</b></div>
+
+            <div style="padding-top: 1rem;"></div>
+
+            I can assure you to deliver your requirement perspective SEO friendly websites.
+
+            <div>✔ Landing page & Product Pages</div>
+            <div>✔ Dashboard - B2B - CRM UX-UI</div>
+            <div>✔ Responsive Design & Boostrap CSS</div>
+            <div>✔ E- Commerce Shop UX-UI And Development</div>
+
+            </p>
+        </div>
+        <div id="guide" style="font-size: 0.9rem;">
+            <h1 style="padding-bottom: 4rem;">Guide</h1>
+            <p>My Latest Project is a E-Commerce website. Where a Local market seller can sell his product. To shop our
+                daily ingredients from our surrounding local markets. To create this website by using NextJs, Tlawind
+                Css, Mongodb, Nodejs.
+            <div class="">Link : <a href="https://squiggiy.netlify.app/"><span style="font-size: large;">Squiggiy
+                        E-Commerce</span></a></div>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
